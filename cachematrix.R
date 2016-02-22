@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Two Functions to follow, (1) makeCacheMatrix and (2) cachesolve
 
-makeCacheMatrix <- function(x = numeric()) {
+## makeCacheMatrix: creates a special "matrix" object that can cache its inverse.
+## 0ne argument, it must be a matrix
+## usage: makeCacheMatrix(x)
+makeCacheMatrix <- function(x = matrix()) {
   
   ima <- NULL
   
@@ -19,6 +21,9 @@ makeCacheMatrix <- function(x = numeric()) {
        getsolve = getsolve)
 }
 
+## cachesolve: it calculates the inverse of the matrix returned by makeCacheMatrix().
+## 0ne argument, it must be a function
+## usage: cachesolve(f(x))
 
 cachesolve <- function(x, ...) {
   ima <- x$getsolve()
